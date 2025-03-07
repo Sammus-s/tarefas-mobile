@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gerenciador_tarefas/model/tarefa.dart';
+import 'package:gerenciador_tarefas/widgets/conteudo_form_dialog.dart';
 
 class ListaTarefasPage extends StatefulWidget{
   @override
@@ -23,7 +24,7 @@ class _ListaTarefasPageState extends State<ListaTarefasPage>{
       appBar: _criarAppBar(),
       body: _criaBody(),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: _abrirForm,
         tooltip: 'Nova Tarefa',
         child: Icon(Icons.add)
       ),
@@ -60,5 +61,16 @@ class _ListaTarefasPageState extends State<ListaTarefasPage>{
         },
         separatorBuilder: (BuildContext context, int index) => Divider()
         );
+  }
+
+  void _abrirForm({Tarefa? tarefaAtual, int? index}){
+    final key = GlobalKey<_ListaTarefasPageState>();
+    showDialog(context: context, builder: (BuildContext context){
+      return AlertDialog(
+        title: Text(tarefaAtual == null ? 'Nova Tarefa': 'Altera Tarefa ${tarefaAtual.id}'),
+        content: ConteudoFormDialog(key: key, tarefaAtual: tarefaAtual,),
+      );
+    });
+
   }
 }
