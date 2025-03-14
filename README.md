@@ -1,6 +1,6 @@
-# gerenciador_tarefas
+# gerenciador_tarefas_si7
 
-Gerenciador de tarefas
+A new Flutter project.
 
 ## Getting Started
 

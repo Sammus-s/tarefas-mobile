@@ -1,11 +1,11 @@
 {
-    "name": "gerenciador_tarefas",
-    "short_name": "gerenciador_tarefas",
+    "name": "gerenciador_tarefas_si7",
+    "short_name": "gerenciador_tarefas_si7",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Gerenciador de tarefas",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
