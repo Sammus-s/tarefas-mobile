@@ -87,7 +87,7 @@ class _ListaTarefasPageState extends State<ListaTarefasPage>{
 
   void _abrirFiltro(){
     final navigator = Navigator.of(context);
-    navigator.push(FiltroPage.ROUTE_NAME).then((alterouValores){
+    navigator.pushNamed(FiltroPage.ROUTE_NAME).then((alterouValores){
       if (alterouValores == true) {
         return true;
       }
